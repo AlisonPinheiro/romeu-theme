@@ -1,5 +1,4 @@
 <?php
-// Inclui os arquivos necessários
 require get_template_directory() . '/inc/enqueue-scripts.php';
 require get_template_directory() . '/inc/custom-post-types.php';
 require get_template_directory() . '/inc/custom-taxonomies.php';
@@ -22,3 +21,4 @@ function meu_tema_customizar_header()
   ]);
 }
 add_action('after_setup_theme', 'meu_tema_customizar_header');
+
