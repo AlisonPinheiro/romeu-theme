@@ -32,3 +32,9 @@
       ?>
     </nav>
   </header>
+  <header>
+
+    <?php if (!is_front_page()): ?>
+      <main class="container mx-auto p-6">
+      <?php endif; ?>
+

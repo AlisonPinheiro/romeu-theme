@@ -2,11 +2,11 @@
 get_template_part('templates/parts/header')
   ?>
 
-<main>
-  <?php
-  echo do_shortcode('[exibir_banner]')
-    ?>
-</main>
+
+<?php
+echo do_shortcode('[exibir_banner]')
+  ?>
+
 <?php
 get_template_part('templates/parts/footer')
   ?>
