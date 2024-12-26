@@ -4,3 +4,9 @@ Author: Alison Pinheiro
 Description: Tema WordPress para exibição de produtos.
 Version: 1.0
 */
+
+header .custom-logo-link {
+  display: block;
+  max-width: 120px;
+  margin-bottom: 20px;
+}

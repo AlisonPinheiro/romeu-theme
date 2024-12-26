@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "start": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css --watch",
-    "prod": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css --minify"
+    "start": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/build.css --watch",
+    "prod": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/build.css --minify"
   },
   "keywords": [],
   "author": "",
