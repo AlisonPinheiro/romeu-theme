@@ -12,6 +12,7 @@ module.exports = {
         roboto: ['"Roboto Condensed"', "sans-serif"],
       },
     },
+    safelist: ["grid-cols-[60%_30%]"],
   },
   plugins: [],
 };
