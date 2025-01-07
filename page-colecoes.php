@@ -3,9 +3,9 @@
 get_template_part('templates/parts/header');
 ?>
 
-<section class="container mx-auto py-12">
-    <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold">Coleções</h1>
+<section class="container mx-auto pb-12">
+    <div class="text-center mb-12 mx-auto" style="max-width: 900px;">
+        <?php the_content(); ?>
     </div>
 
     <?php
@@ -20,18 +20,21 @@ get_template_part('templates/parts/header');
             <?php foreach ($colecoes as $colecao):
                 // Recupera o ID da imagem associada ao termo
                 $image_id = get_term_meta($colecao->term_id, 'colecao_image', true);
-                $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'medium') : null;
+                $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : null; // Alterado para 'large'
                 ?>
-                <a href="<?php echo get_term_link($colecao); ?>"
-                    class="block p-6 border rounded-lg shadow hover:shadow-lg transition">
+                <a href="<?php echo get_term_link($colecao); ?>" class="block relative group overflow-hidden">
                     <?php if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($colecao->name); ?>"
-                            class="mb-4 rounded-lg">
+                        <div class="relative w-full h-64 overflow-hidden">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($colecao->name); ?>"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        </div>
                     <?php endif; ?>
-                    <h2 class="text-2xl font-bold mb-2"><?php echo esc_html($colecao->name); ?></h2>
-                    <?php if (!empty($colecao->description)): ?>
-                        <p class="text-gray-600"><?php echo esc_html($colecao->description); ?></p>
-                    <?php endif; ?>
+                    <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-4">
+                        <h2 class="text-lg font-bold mb-1 text-gray-800"><?php echo esc_html($colecao->name); ?></h2>
+                        <?php if (!empty($colecao->description)): ?>
+                            <p class="text-sm text-gray-600"><?php echo esc_html($colecao->description); ?></p>
+                        <?php endif; ?>
+                    </div>
                 </a>
             <?php endforeach; ?>
         </div>
