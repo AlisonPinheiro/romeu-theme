@@ -3,9 +3,7 @@ get_template_part('templates/parts/header')
   ?>
 
 
-<?php
-echo do_shortcode('[exibir_banner]')
-  ?>
+<h1> 404 error</h1>
 
 
 <?php

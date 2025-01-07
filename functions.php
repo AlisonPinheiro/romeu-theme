@@ -44,3 +44,4 @@ function adicionar_suporte_imagem_destacada()
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'adicionar_suporte_imagem_destacada');
+
