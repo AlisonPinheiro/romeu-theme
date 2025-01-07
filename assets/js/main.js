@@ -15,4 +15,16 @@ jQuery(document).ready(function ($) {
       currentIndex < slides.children.length - 1 ? currentIndex + 1 : 0;
     slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    Fancybox.bind("[data-fancybox='gallery']", {
+      infinite: true, // Permite rolar as imagens infinitamente
+      Toolbar: {
+        display: ["close"], // Exibe o botão de fechar
+      },
+      Thumbs: {
+        autoStart: true, // Exibe miniaturas na navegação
+      },
+    });
+  });
 });

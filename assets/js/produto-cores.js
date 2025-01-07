@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     const index = coresContainer.children(".cor-item").length;
 
     const novaCor = `
-          <div class="cor-item">
+          <div class="cor-item" style="border: 1px solid #ccc; padding: 10px;">
               <p>
                   <label for="produto_cores[${index}][nome]"><strong>Nome da Cor:</strong></label>
                   <input type="text" name="produto_cores[${index}][nome]" class="widefat">

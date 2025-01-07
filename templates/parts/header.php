@@ -9,7 +9,7 @@
 
 </head>
 
-<body class="bg-white text-gray-800 font-roboto text-sm">
+<body <?php body_class('bg-white text-gray-800 font-roboto text-sm'); ?>>
   <header class="bg-white flex flex-col items-center  p-4">
 
     <?php
@@ -32,9 +32,8 @@
       ?>
     </nav>
   </header>
-  <header>
 
-    <?php if (!is_front_page()): ?>
-      <main class="container mx-auto p-6">
-      <?php endif; ?>
+  <?php if (!is_front_page() && !(is_singular('produto') && has_term('', 'colecoes'))): ?>
+    <main class="container mx-auto p-6">
+    <?php endif; ?>
 

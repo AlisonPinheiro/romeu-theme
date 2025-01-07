@@ -52,8 +52,17 @@ function enqueue_media_uploader()
         null,
         true
       );
+
+      wp_enqueue_script('produto-ficha-tecnica-js', get_template_directory_uri() . '/assets/js/produto-ficha-tecnica.js', ['jquery'], null, true);
+
     }
   }
 }
 add_action('admin_enqueue_scripts', 'enqueue_media_uploader');
 
+function enqueue_fancybox_assets()
+{
+  wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.css', [], null);
+  wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.js', ['jquery'], null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_fancybox_assets');
