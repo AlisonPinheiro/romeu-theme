@@ -15,7 +15,7 @@ get_template_part('templates/parts/header')
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <?php while (have_posts()) : the_post(); ?>
                 <article class="border rounded-lg p-4 shadow hover:shadow-lg transition duration-300">
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>">    
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="rounded-md mb-4">
                         <?php endif; ?>
