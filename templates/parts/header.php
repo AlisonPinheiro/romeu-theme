@@ -10,13 +10,13 @@
 </head>
 
 <body <?php body_class('bg-white text-gray-800 font-roboto text-sm'); ?>>
-  <header class="bg-white flex flex-col items-center  p-4">
+  <header class="bg-primary flex flex-col items-center  p-4">
 
     <?php
     if (has_custom_logo()) {
       the_custom_logo();
     } else {
-      echo '<a href="' . home_url() . '" class="text-white text-xl font-bold">' . get_bloginfo('name') . '</a>';
+      echo '<a href="' . home_url() . '" class="text-primary text-xl font-bold">' . get_bloginfo('name') . '</a>';
     }
     ?>
 
